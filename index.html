@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Saya</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h2>Portofolio</h2>
+        <ul id="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#skills">Keahlian</a></li>
+            <li><a href="#projects">Projek</a></li>
+            <li><a href="#contact">Kontak</a></li>
+        </ul>
+        <button id="menuBtn">☰</button>
+    </nav>
+
+    <section id="home" class="home">
+        <div class="home-text">
+            <p>Halo, saya</p>
+            <h1>Nama Kamu</h1>
+            <h3>Pelajar SMK & Web Developer</h3>
+            <p>Saya adalah pelajar SMK jurusan RPL yang tertarik dengan dunia pemrograman dan pengembangan website.</p>
+            <a href="#projects" class="btn">Lihat Projek</a>
+        </div>
+        <div class="profile">
+            <div class="profile-circle">FOTO</div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="title">Tentang Saya</h2>
+        <div class="about-box">
+            <p>Saya merupakan siswa SMK yang sedang mempelajari Rekayasa Perangkat Lunak. Saya senang membuat website, mempelajari bahasa pemrograman, dan mencoba membuat berbagai aplikasi sederhana.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2 class="title">Keahlian</h2>
+        <div class="skills">
+            <div class="card"><h3>HTML</h3><p>Membuat struktur halaman website.</p></div>
+            <div class="card"><h3>CSS</h3><p>Membuat tampilan website menjadi menarik.</p></div>
+            <div class="card"><h3>JavaScript</h3><p>Membuat website menjadi lebih interaktif.</p></div>
+            <div class="card"><h3>PHP</h3><p>Membuat website dengan sistem sederhana.</p></div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="title">Projek Saya</h2>
+        <div class="projects">
+            <div class="project-card">
+                <div class="project-img">PROJEK 1</div>
+                <h3>Aplikasi Kasir</h3>
+                <p>Website kasir makanan ringan untuk mengelola produk dan transaksi.</p>
+                <button onclick="lihatProjek('Aplikasi Kasir')">Lihat</button>
+            </div>
+            <div class="project-card">
+                <div class="project-img">PROJEK 2</div>
+                <h3>To-Do List</h3>
+                <p>Website untuk mencatat dan mengatur tugas sekolah.</p>
+                <button onclick="lihatProjek('To-Do List')">Lihat</button>
+            </div>
+            <div class="project-card">
+                <div class="project-img">PROJEK 3</div>
+                <h3>Website Sekolah</h3>
+                <p>Website sederhana yang berisi informasi mengenai sekolah.</p>
+                <button onclick="lihatProjek('Website Sekolah')">Lihat</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="title">Kontak Saya</h2>
+        <div class="contact-box">
+            <p>Email: emailkamu@gmail.com</p>
+            <p>Instagram: @username</p>
+            <p>WhatsApp: 08xxxxxxxxxx</p>
+            <button onclick="kirimPesan()">Hubungi Saya</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Nama Kamu | Portofolio</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
