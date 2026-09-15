@@ -3,90 +3,308 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Saya</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Portofolio Adelia</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f7fa;
+            color: #222;
+            transition: 0.3s;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #222;
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        nav h2 { color: white; }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: .3s;
+        }
+
+        nav a:hover { color: #4da3ff; }
+
+        .home {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 100px 20px 50px;
+        }
+
+        .home h1 {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        .home h1 span { color: #007bff; }
+
+        .home p {
+            font-size: 20px;
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+            transform: scale(1.05);
+        }
+
+        section { padding: 80px 8%; }
+
+        .judul {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .judul h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .judul p { color: #777; }
+
+        .about, .contact { background: white; text-align: center; }
+
+        .about > p {
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .skills, .projects {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .skill, .card {
+            background: white;
+            width: 280px;
+            padding: 25px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,.08);
+            transition: .3s;
+        }
+
+        .skill:hover, .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .skill h3, .card h3 {
+            color: #007bff;
+            margin-bottom: 12px;
+        }
+
+        .skill p, .card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .project { background: #eef3f8; }
+
+        #darkMode {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 7px;
+            cursor: pointer;
+            background: #222;
+            color: white;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        body.dark {
+            background: #121212;
+            color: white;
+        }
+
+        body.dark .about,
+        body.dark .contact,
+        body.dark .skill,
+        body.dark .card {
+            background: #1e1e1e;
+        }
+
+        body.dark .project { background: #181818; }
+        body.dark p { color: #ccc; }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav ul {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .home h1 { font-size: 35px; }
+
+            .skill, .card {
+                width: 100%;
+                max-width: 320px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <nav class="navbar">
+
+    <nav>
         <h2>Portofolio</h2>
-        <ul id="menu">
+        <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">Tentang</a></li>
-            <li><a href="#skills">Keahlian</a></li>
-            <li><a href="#projects">Projek</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#project">Project</a></li>
             <li><a href="#contact">Kontak</a></li>
         </ul>
-        <button id="menuBtn">☰</button>
     </nav>
 
-    <section id="home" class="home">
-        <div class="home-text">
-            <p>Halo, saya</p>
-            <h1>Nama Kamu</h1>
-            <h3>Pelajar SMK & Web Developer</h3>
-            <p>Saya adalah pelajar SMK jurusan RPL yang tertarik dengan dunia pemrograman dan pengembangan website.</p>
-            <a href="#projects" class="btn">Lihat Projek</a>
-        </div>
-        <div class="profile">
-            <div class="profile-circle">FOTO</div>
+    <section class="home" id="home">
+        <div>
+            <h1>Halo, Saya <span>Adelia</span></h1>
+            <p>Pelajar SMK | Web Developer Pemula</p>
+            <a href="#about" class="btn">Lihat Profil</a>
         </div>
     </section>
 
-    <section id="about">
-        <h2 class="title">Tentang Saya</h2>
-        <div class="about-box">
-            <p>Saya merupakan siswa SMK yang sedang mempelajari Rekayasa Perangkat Lunak. Saya senang membuat website, mempelajari bahasa pemrograman, dan mencoba membuat berbagai aplikasi sederhana.</p>
+    <section class="about" id="about">
+        <div class="judul">
+            <h2>Tentang Saya</h2>
+            <p>Mengenal saya lebih dekat</p>
         </div>
+        <p>
+            Halo! Saya adalah seorang pelajar SMK yang sedang belajar
+            Rekayasa Perangkat Lunak. Saya tertarik dengan dunia teknologi,
+            khususnya pembuatan website dan aplikasi.
+        </p>
+        <button id="darkMode">🌙 Mode Gelap</button>
     </section>
 
     <section id="skills">
-        <h2 class="title">Keahlian</h2>
+        <div class="judul">
+            <h2>Skills</h2>
+            <p>Beberapa kemampuan yang saya pelajari</p>
+        </div>
+
         <div class="skills">
-            <div class="card"><h3>HTML</h3><p>Membuat struktur halaman website.</p></div>
-            <div class="card"><h3>CSS</h3><p>Membuat tampilan website menjadi menarik.</p></div>
-            <div class="card"><h3>JavaScript</h3><p>Membuat website menjadi lebih interaktif.</p></div>
-            <div class="card"><h3>PHP</h3><p>Membuat website dengan sistem sederhana.</p></div>
+            <div class="skill"><h3>HTML</h3><p>Membuat struktur website.</p></div>
+            <div class="skill"><h3>CSS</h3><p>Mendesain tampilan website.</p></div>
+            <div class="skill"><h3>JavaScript</h3><p>Membuat website interaktif.</p></div>
+            <div class="skill"><h3>PHP</h3><p>Membuat website dinamis.</p></div>
         </div>
     </section>
 
-    <section id="projects">
-        <h2 class="title">Projek Saya</h2>
+    <section class="project" id="project">
+        <div class="judul">
+            <h2>Project Saya</h2>
+            <p>Beberapa project yang pernah dibuat</p>
+        </div>
+
         <div class="projects">
-            <div class="project-card">
-                <div class="project-img">PROJEK 1</div>
+            <div class="card">
                 <h3>Aplikasi Kasir</h3>
                 <p>Website kasir makanan ringan untuk mengelola produk dan transaksi.</p>
-                <button onclick="lihatProjek('Aplikasi Kasir')">Lihat</button>
+                <a href="#" class="btn project-btn">Lihat Project</a>
             </div>
-            <div class="project-card">
-                <div class="project-img">PROJEK 2</div>
+
+            <div class="card">
                 <h3>To-Do List</h3>
-                <p>Website untuk mencatat dan mengatur tugas sekolah.</p>
-                <button onclick="lihatProjek('To-Do List')">Lihat</button>
+                <p>Aplikasi untuk mencatat dan mengelola tugas serta deadline.</p>
+                <a href="#" class="btn project-btn">Lihat Project</a>
             </div>
-            <div class="project-card">
-                <div class="project-img">PROJEK 3</div>
+
+            <div class="card">
                 <h3>Website Sekolah</h3>
                 <p>Website sederhana yang berisi informasi mengenai sekolah.</p>
-                <button onclick="lihatProjek('Website Sekolah')">Lihat</button>
+                <a href="#" class="btn project-btn">Lihat Project</a>
             </div>
         </div>
     </section>
 
-    <section id="contact">
-        <h2 class="title">Kontak Saya</h2>
-        <div class="contact-box">
-            <p>Email: emailkamu@gmail.com</p>
-            <p>Instagram: @username</p>
-            <p>WhatsApp: 08xxxxxxxxxx</p>
-            <button onclick="kirimPesan()">Hubungi Saya</button>
+    <section class="contact" id="contact">
+        <div class="judul">
+            <h2>Kontak</h2>
+            <p>Hubungi saya melalui</p>
         </div>
+        <p>📧 Email: emailkamu@gmail.com</p>
+        <p>📱 WhatsApp: 08xxxxxxxxxx</p>
+        <p>📍 Bandung Barat, Indonesia</p>
     </section>
 
     <footer>
-        <p>© 2026 Nama Kamu | Portofolio</p>
+        <p>© 2026 Portofolio Adelia. All Rights Reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        const darkMode = document.getElementById("darkMode");
+
+        darkMode.addEventListener("click", function () {
+            document.body.classList.toggle("dark");
+
+            darkMode.innerHTML = document.body.classList.contains("dark")
+                ? "☀️ Mode Terang"
+                : "🌙 Mode Gelap";
+        });
+
+        document.querySelectorAll(".project-btn").forEach(function (button) {
+            button.addEventListener("click", function (event) {
+                event.preventDefault();
+                alert("Project sedang dalam proses pengembangan.");
+            });
+        });
+    </script>
+
 </body>
 </html>
